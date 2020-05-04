@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Xilinx_VM/bitcounter_4/counter.ncd
+OUTFILE=/home/ise/Xilinx_VM/bitcounter_4/counter.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/ise/Xilinx_VM/bitcounter_4
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620
