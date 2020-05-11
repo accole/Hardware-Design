@@ -1,0 +1,782 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: clock_gen.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "clock_gen.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "clock_gen"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : clock_gen
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/Xilinx_VM/Project3/clock_gen.v" into library work
+Parsing module <clock_gen>.
+Parsing module <clock_div_two>.
+Parsing module <clock_div_twenty_eight>.
+Parsing module <clock_div_five>.
+Parsing module <clock_strobe>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <clock_gen>.
+
+Elaborating module <clock_div_two>.
+
+Elaborating module <clock_div_twenty_eight>.
+
+Elaborating module <clock_div_five>.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 145: Signal <rst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 148: Signal <duty_pos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 150: Signal <duty_pos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 152: Signal <duty_pos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 158: Signal <rst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 161: Signal <duty_neg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 163: Signal <duty_neg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 165: Signal <duty_neg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <clock_strobe>.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 216: Signal <rst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 222: Signal <start> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 225: Signal <glitchy_counter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 225: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:91 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 229: Signal <glitchy_counter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/ise/Xilinx_VM/Project3/clock_gen.v" Line 229: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <clock_gen>.
+    Related source file is "/home/ise/Xilinx_VM/Project3/clock_gen.v".
+    Summary:
+	no macro.
+Unit <clock_gen> synthesized.
+
+Synthesizing Unit <clock_div_two>.
+    Related source file is "/home/ise/Xilinx_VM/Project3/clock_gen.v".
+    Found 4-bit register for signal <count>.
+    Found 4-bit adder for signal <count[3]_GND_2_o_add_1_OUT> created at line 82.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <clock_div_two> synthesized.
+
+Synthesizing Unit <clock_div_twenty_eight>.
+    Related source file is "/home/ise/Xilinx_VM/Project3/clock_gen.v".
+    Found 1-bit register for signal <toggle>.
+    Found 1-bit register for signal <start>.
+    Found 4-bit register for signal <count>.
+    Found 4-bit adder for signal <count[3]_GND_3_o_add_3_OUT> created at line 119.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <clock_div_twenty_eight> synthesized.
+
+Synthesizing Unit <clock_div_five>.
+    Related source file is "/home/ise/Xilinx_VM/Project3/clock_gen.v".
+    Found 3-bit register for signal <count_pos>.
+    Found 3-bit register for signal <count_neg>.
+    Found 3-bit adder for signal <count_pos[2]_GND_4_o_add_6_OUT> created at line 179.
+    Found 3-bit adder for signal <count_neg[2]_GND_4_o_add_12_OUT> created at line 193.
+WARNING:Xst:737 - Found 1-bit latch for signal <duty_neg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <duty_pos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   2 Latch(s).
+Unit <clock_div_five> synthesized.
+
+Synthesizing Unit <clock_strobe>.
+    Related source file is "/home/ise/Xilinx_VM/Project3/clock_gen.v".
+    Found 2-bit register for signal <count>.
+    Found 8-bit adder for signal <glitchy_counter[7]_GND_7_o_add_3_OUT> created at line 229.
+    Found 2-bit adder for signal <count[1]_GND_7_o_add_7_OUT> created at line 240.
+    Found 8-bit subtractor for signal <GND_7_o_GND_7_o_sub_3_OUT<7:0>> created at line 225.
+WARNING:Xst:737 - Found 1-bit latch for signal <start>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   2 Multiplexer(s).
+Unit <clock_strobe> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 4-bit register                                        : 2
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Multiplexers                                         : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <clock_div_five>.
+The following registers are absorbed into counter <count_pos>: 1 register on signal <count_pos>.
+The following registers are absorbed into counter <count_neg>: 1 register on signal <count_neg>.
+Unit <clock_div_five> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clock_div_twenty_eight>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clock_div_twenty_eight> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clock_div_two>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clock_div_two> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clock_strobe>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clock_strobe> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 5
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Multiplexers                                         : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <clock_gen>, Counter <task_one/count> <task_four/count> are equivalent, XST will keep only <task_one/count>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: task_four/GND_7_o_GND_7_o_sub_3_OUT<7>, glitchy_counter<7>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: glitchy_counter<6>, task_four/GND_7_o_GND_7_o_sub_3_OUT<6>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: glitchy_counter<5>, task_four/GND_7_o_GND_7_o_sub_3_OUT<5>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: task_four/GND_7_o_GND_7_o_sub_3_OUT<4>, glitchy_counter<4>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: task_four/GND_7_o_GND_7_o_sub_3_OUT<3>, glitchy_counter<3>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: glitchy_counter<2>, task_four/GND_7_o_GND_7_o_sub_3_OUT<2>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: glitchy_counter<0>.
+WARNING:Xst:2170 - Unit clock_gen : the following signal(s) form a combinatorial loop: glitchy_counter<1>.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    task_four/start in unit <clock_gen>
+
+
+Optimizing unit <clock_gen> ...
+INFO:Xst:2261 - The FF/Latch <task_one/count_0> in Unit <clock_gen> is equivalent to the following FF/Latch, which will be removed : <task_two/count_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block clock_gen, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 15
+ Flip-Flops                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : clock_gen.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 37
+#      INV                         : 4
+#      LUT2                        : 5
+#      LUT3                        : 6
+#      LUT4                        : 11
+#      LUT5                        : 3
+#      LUT6                        : 7
+#      VCC                         : 1
+# FlipFlops/Latches                : 18
+#      FD                          : 8
+#      FDR                         : 7
+#      LD                          : 1
+#      LDC                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 1
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              18  out of  18224     0%  
+ Number of Slice LUTs:                   36  out of   9112     0%  
+    Number used as Logic:                36  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     37
+   Number with an unused Flip Flop:      19  out of     37    51%  
+   Number with an unused LUT:             1  out of     37     2%  
+   Number of fully used LUT-FF pairs:    17  out of     37    45%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------+-----------------------------+-------+
+Clock Signal                                                             | Clock buffer(FF name)       | Load  |
+-------------------------------------------------------------------------+-----------------------------+-------+
+task_three/GND_4_o_GND_4_o_OR_32_o(task_three/GND_4_o_GND_4_o_OR_32_o1:O)| NONE(*)(task_three/duty_pos)| 1     |
+task_three/GND_4_o_GND_4_o_OR_33_o(task_three/GND_4_o_GND_4_o_OR_33_o1:O)| NONE(*)(task_three/duty_neg)| 1     |
+clk_in                                                                   | BUFGP                       | 15    |
+task_four/start_G(task_four/start_G:O)                                   | NONE(*)(task_four/start)    | 1     |
+-------------------------------------------------------------------------+-----------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.242ns (Maximum Frequency: 446.100MHz)
+   Minimum input arrival time before clock: 3.141ns
+   Maximum output required time after clock: 16.424ns
+   Maximum combinational path delay: 16.739ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'task_three/GND_4_o_GND_4_o_OR_32_o'
+  Clock period: 1.936ns (frequency: 516.502MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.936ns (Levels of Logic = 1)
+  Source:            task_three/duty_pos (LATCH)
+  Destination:       task_three/duty_pos (LATCH)
+  Source Clock:      task_three/GND_4_o_GND_4_o_OR_32_o falling
+  Destination Clock: task_three/GND_4_o_GND_4_o_OR_32_o falling
+
+  Data Path: task_three/duty_pos to task_three/duty_pos
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.616  task_three/duty_pos (task_three/duty_pos)
+     INV:I->O              1   0.206   0.579  task_three/duty_pos_INV_4_o1_INV_0 (task_three/duty_pos_INV_4_o)
+     LDC:D                     0.037          task_three/duty_pos
+    ----------------------------------------
+    Total                      1.936ns (0.741ns logic, 1.195ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'task_three/GND_4_o_GND_4_o_OR_33_o'
+  Clock period: 1.936ns (frequency: 516.502MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.936ns (Levels of Logic = 1)
+  Source:            task_three/duty_neg (LATCH)
+  Destination:       task_three/duty_neg (LATCH)
+  Source Clock:      task_three/GND_4_o_GND_4_o_OR_33_o falling
+  Destination Clock: task_three/GND_4_o_GND_4_o_OR_33_o falling
+
+  Data Path: task_three/duty_neg to task_three/duty_neg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.616  task_three/duty_neg (task_three/duty_neg)
+     INV:I->O              1   0.206   0.579  task_three/duty_neg_INV_6_o1_INV_0 (task_three/duty_neg_INV_6_o)
+     LDC:D                     0.037          task_three/duty_neg
+    ----------------------------------------
+    Total                      1.936ns (0.741ns logic, 1.195ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 2.242ns (frequency: 446.100MHz)
+  Total number of paths / destination ports: 49 / 14
+-------------------------------------------------------------------------
+Delay:               2.242ns (Levels of Logic = 1)
+  Source:            task_one/count_0 (FF)
+  Destination:       task_one/count_0 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising
+
+  Data Path: task_one/count_0 to task_one/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.447   0.908  task_one/count_0 (task_one/count_0)
+     INV:I->O              1   0.206   0.579  task_one/Mcount_count_xor<0>11_INV_0 (Result<0>1)
+     FDR:D                     0.102          task_one/count_0
+    ----------------------------------------
+    Total                      2.242ns (0.755ns logic, 1.487ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'task_four/start_G'
+  Clock period: 1.391ns (frequency: 718.778MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.391ns (Levels of Logic = 1)
+  Source:            task_four/start (LATCH)
+  Destination:       task_four/start (LATCH)
+  Source Clock:      task_four/start_G falling
+  Destination Clock: task_four/start_G falling
+
+  Data Path: task_four/start to task_four/start
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.498   0.651  task_four/start (task_four/start)
+     LUT4:I3->O            1   0.205   0.000  task_four/start_D (task_four/start_D)
+     LD:D                      0.037          task_four/start
+    ----------------------------------------
+    Total                      1.391ns (0.740ns logic, 0.651ns route)
+                                       (53.2% logic, 46.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'task_three/GND_4_o_GND_4_o_OR_32_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.901ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       task_three/duty_pos (LATCH)
+  Destination Clock: task_three/GND_4_o_GND_4_o_OR_32_o falling
+
+  Data Path: rst to task_three/duty_pos
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.249  rst_IBUF (rst_IBUF)
+     LDC:CLR                   0.430          task_three/duty_pos
+    ----------------------------------------
+    Total                      2.901ns (1.652ns logic, 1.249ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'task_three/GND_4_o_GND_4_o_OR_33_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.901ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       task_three/duty_neg (LATCH)
+  Destination Clock: task_three/GND_4_o_GND_4_o_OR_33_o falling
+
+  Data Path: rst to task_three/duty_neg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.249  rst_IBUF (rst_IBUF)
+     LDC:CLR                   0.430          task_three/duty_neg
+    ----------------------------------------
+    Total                      2.901ns (1.652ns logic, 1.249ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.141ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       task_two/count_1 (FF)
+  Destination Clock: clk_in rising
+
+  Data Path: rst to task_two/count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.614  rst_IBUF (rst_IBUF)
+     LUT6:I0->O            1   0.203   0.000  task_two/count_3_rstpot (task_two/count_3_rstpot)
+     FD:D                      0.102          task_two/count_3
+    ----------------------------------------
+    Total                      3.141ns (1.527ns logic, 1.614ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'task_four/start_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.959ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       task_four/start (LATCH)
+  Destination Clock: task_four/start_G falling
+
+  Data Path: rst to task_four/start
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.497  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            1   0.203   0.000  task_four/start_D (task_four/start_D)
+     LD:D                      0.037          task_four/start
+    ----------------------------------------
+    Total                      2.959ns (1.462ns logic, 1.497ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'task_four/start_G'
+  Total number of paths / destination ports: 274 / 8
+-------------------------------------------------------------------------
+Offset:              16.424ns (Levels of Logic = 13)
+  Source:            task_four/start (LATCH)
+  Destination:       glitchy_counter<7> (PAD)
+  Source Clock:      task_four/start_G falling
+
+  Data Path: task_four/start to glitchy_counter<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.498   0.879  task_four/start (task_four/start)
+     LUT3:I0->O            8   0.205   0.803  task_four/GND_7_o_GND_7_o_AND_2_o1 (task_four/GND_7_o_GND_7_o_AND_2_o)
+     LUT3:I2->O            8   0.205   0.907  task_four/Mmux_glitchy_counter11 (glitchy_counter_0_OBUF)
+     LUT4:I2->O            8   0.203   1.050  task_four/Mmux_glitchy_counter21 (glitchy_counter_1_OBUF)
+     LUT5:I1->O            7   0.203   1.021  task_four/Mmux_glitchy_counter31 (glitchy_counter_2_OBUF)
+     LUT6:I2->O            5   0.203   1.059  task_four/Mmux_glitchy_counter41 (glitchy_counter_3_OBUF)
+     LUT5:I0->O            1   0.203   0.580  task_four/Mmux_glitchy_counter5_SW0 (N8)
+     LUT3:I2->O            4   0.205   1.048  task_four/Mmux_glitchy_counter5 (glitchy_counter_4_OBUF)
+     LUT6:I0->O            1   0.203   0.580  task_four/Mmux_glitchy_counter6_SW0 (N10)
+     LUT3:I2->O            3   0.205   0.995  task_four/Mmux_glitchy_counter6 (glitchy_counter_5_OBUF)
+     LUT6:I1->O            2   0.203   0.617  task_four/Mmux_glitchy_counter713 (task_four/Mmux_glitchy_counter71)
+     LUT3:I2->O            3   0.205   0.755  task_four/Mmux_glitchy_counter72 (glitchy_counter_6_OBUF)
+     LUT5:I3->O            2   0.203   0.616  task_four/Mmux_glitchy_counter81 (glitchy_counter_7_OBUF)
+     OBUF:I->O                 2.571          glitchy_counter_7_OBUF (glitchy_counter<7>)
+    ----------------------------------------
+    Total                     16.424ns (5.515ns logic, 10.909ns route)
+                                       (33.6% logic, 66.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 553 / 13
+-------------------------------------------------------------------------
+Offset:              16.402ns (Levels of Logic = 13)
+  Source:            task_one/count_0 (FF)
+  Destination:       glitchy_counter<7> (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: task_one/count_0 to glitchy_counter<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.447   0.909  task_one/count_0 (task_one/count_0)
+     LUT3:I2->O            8   0.205   0.803  task_four/GND_7_o_GND_7_o_AND_2_o1 (task_four/GND_7_o_GND_7_o_AND_2_o)
+     LUT3:I2->O            8   0.205   0.907  task_four/Mmux_glitchy_counter11 (glitchy_counter_0_OBUF)
+     LUT4:I2->O            8   0.203   1.050  task_four/Mmux_glitchy_counter21 (glitchy_counter_1_OBUF)
+     LUT5:I1->O            7   0.203   1.021  task_four/Mmux_glitchy_counter31 (glitchy_counter_2_OBUF)
+     LUT6:I2->O            5   0.203   1.059  task_four/Mmux_glitchy_counter41 (glitchy_counter_3_OBUF)
+     LUT5:I0->O            1   0.203   0.580  task_four/Mmux_glitchy_counter5_SW0 (N8)
+     LUT3:I2->O            4   0.205   1.048  task_four/Mmux_glitchy_counter5 (glitchy_counter_4_OBUF)
+     LUT6:I0->O            1   0.203   0.580  task_four/Mmux_glitchy_counter6_SW0 (N10)
+     LUT3:I2->O            3   0.205   0.995  task_four/Mmux_glitchy_counter6 (glitchy_counter_5_OBUF)
+     LUT6:I1->O            2   0.203   0.617  task_four/Mmux_glitchy_counter713 (task_four/Mmux_glitchy_counter71)
+     LUT3:I2->O            3   0.205   0.755  task_four/Mmux_glitchy_counter72 (glitchy_counter_6_OBUF)
+     LUT5:I3->O            2   0.203   0.616  task_four/Mmux_glitchy_counter81 (glitchy_counter_7_OBUF)
+     OBUF:I->O                 2.571          glitchy_counter_7_OBUF (glitchy_counter<7>)
+    ----------------------------------------
+    Total                     16.402ns (5.464ns logic, 10.938ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'task_three/GND_4_o_GND_4_o_OR_32_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.572ns (Levels of Logic = 2)
+  Source:            task_three/duty_pos (LATCH)
+  Destination:       clk_div_5 (PAD)
+  Source Clock:      task_three/GND_4_o_GND_4_o_OR_32_o falling
+
+  Data Path: task_three/duty_pos to clk_div_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.721  task_three/duty_pos (task_three/duty_pos)
+     LUT2:I0->O            1   0.203   0.579  task_three/clock_div_51 (clk_div_5_OBUF)
+     OBUF:I->O                 2.571          clk_div_5_OBUF (clk_div_5)
+    ----------------------------------------
+    Total                      4.572ns (3.272ns logic, 1.300ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'task_three/GND_4_o_GND_4_o_OR_33_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.470ns (Levels of Logic = 2)
+  Source:            task_three/duty_neg (LATCH)
+  Destination:       clk_div_5 (PAD)
+  Source Clock:      task_three/GND_4_o_GND_4_o_OR_33_o falling
+
+  Data Path: task_three/duty_neg to clk_div_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.617  task_three/duty_neg (task_three/duty_neg)
+     LUT2:I1->O            1   0.205   0.579  task_three/clock_div_51 (clk_div_5_OBUF)
+     OBUF:I->O                 2.571          clk_div_5_OBUF (clk_div_5)
+    ----------------------------------------
+    Total                      4.470ns (3.274ns logic, 1.196ns route)
+                                       (73.2% logic, 26.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 276 / 8
+-------------------------------------------------------------------------
+Delay:               16.739ns (Levels of Logic = 13)
+  Source:            rst (PAD)
+  Destination:       glitchy_counter<7> (PAD)
+
+  Data Path: rst to glitchy_counter<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.478  rst_IBUF (rst_IBUF)
+     LUT3:I0->O            8   0.205   0.907  task_four/Mmux_glitchy_counter11 (glitchy_counter_0_OBUF)
+     LUT4:I2->O            8   0.203   1.050  task_four/Mmux_glitchy_counter21 (glitchy_counter_1_OBUF)
+     LUT5:I1->O            7   0.203   1.021  task_four/Mmux_glitchy_counter31 (glitchy_counter_2_OBUF)
+     LUT6:I2->O            5   0.203   1.059  task_four/Mmux_glitchy_counter41 (glitchy_counter_3_OBUF)
+     LUT5:I0->O            1   0.203   0.580  task_four/Mmux_glitchy_counter5_SW0 (N8)
+     LUT3:I2->O            4   0.205   1.048  task_four/Mmux_glitchy_counter5 (glitchy_counter_4_OBUF)
+     LUT6:I0->O            1   0.203   0.580  task_four/Mmux_glitchy_counter6_SW0 (N10)
+     LUT3:I2->O            3   0.205   0.995  task_four/Mmux_glitchy_counter6 (glitchy_counter_5_OBUF)
+     LUT6:I1->O            2   0.203   0.617  task_four/Mmux_glitchy_counter713 (task_four/Mmux_glitchy_counter71)
+     LUT3:I2->O            3   0.205   0.755  task_four/Mmux_glitchy_counter72 (glitchy_counter_6_OBUF)
+     LUT5:I3->O            2   0.203   0.616  task_four/Mmux_glitchy_counter81 (glitchy_counter_7_OBUF)
+     OBUF:I->O                 2.571          glitchy_counter_7_OBUF (glitchy_counter<7>)
+    ----------------------------------------
+    Total                     16.739ns (6.034ns logic, 10.705ns route)
+                                       (36.0% logic, 64.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    2.242|         |    1.633|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock task_four/start_G
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+clk_in           |         |         |    1.826|         |
+task_four/start_G|         |         |    1.391|         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock task_three/GND_4_o_GND_4_o_OR_32_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+task_three/GND_4_o_GND_4_o_OR_32_o|         |         |    1.936|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock task_three/GND_4_o_GND_4_o_OR_33_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+task_three/GND_4_o_GND_4_o_OR_33_o|         |         |    1.936|         |
+----------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 11.79 secs
+ 
+--> 
+
+
+Total memory usage is 386580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
